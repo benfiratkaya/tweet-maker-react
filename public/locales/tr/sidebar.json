@@ -1,0 +1,20 @@
+{
+    "title": "Ayarlar",
+    "tweet-theme": "Tweet Tema:",
+    "tweet-theme-light": "Aydınlık",
+    "tweet-theme-dark": "Karanlık",
+    "profile-photo": "Profil Resmi:",
+    "frame": "Çerçeve:",
+    "photo": "Resim:",
+    "account-status": "Onaylı Hesap:",
+    "account-status-tip": "Your confirmed account icon is added next to your name.",
+    "name": "Ad:",
+    "name-tip": "Enter the name that will appear in the picture.",
+    "username": "Kullanıcı Adı:",
+    "username-tip": "Enter the username that will appear in the picture.",
+    "content": "İçerik:",
+    "content-tip": "For add link: {{link}}",
+    "content-image": "İçerik Resmi:",
+    "content-image-tip": "Added image below content.",
+    "select-img-button": "Resim Seç"
+}
