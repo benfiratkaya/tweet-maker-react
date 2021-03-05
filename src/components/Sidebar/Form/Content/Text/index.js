@@ -14,14 +14,13 @@ const TextSettings = ({ content, updateTweet }) => {
         className="form-control"
         placeholder={t("content-placeholder")}
         rows="3"
+        value={content.text || ""}
         onChange={(e) =>
           updateTweet({
             content: { ...content, text: e.target.value },
           })
         }
-      >
-        {content.text}
-      </textarea>
+      ></textarea>
       <small id="tweetContentHelp" className="form-text text-muted">
         {t("content-tip")}
       </small>

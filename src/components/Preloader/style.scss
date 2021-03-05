@@ -9,6 +9,10 @@
     bottom: 0;
     z-index: 99999;
     background-color: #f8f8f8;
+
+    html[data-theme=dark] & {
+        background-color: #06090F;
+    }
 }
   
 .preloader .spinner-border {
@@ -16,4 +20,8 @@
     width: 32px;
     height: 32px;
     color: #5e72e4;
+
+    html[data-theme=dark] & {
+        color: #fff;
+    }
 }

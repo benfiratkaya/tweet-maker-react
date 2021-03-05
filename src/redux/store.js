@@ -26,14 +26,14 @@ const store = createStore(
   bindMiddleware([thunkMiddleware, promiseMiddleware])
 );
 
-store.subscribe(() => {
+store.subscribe(
   throttle(() => {
     saveState({
       tweet: store.getState().tweet,
       theme: store.getState().theme,
     });
-  }, 1000);
-  setThemeAttribute(store.getState().theme);
-});
+    setThemeAttribute(store.getState().theme);
+  }, 1000)
+);
 
 export default store;
