@@ -2,6 +2,7 @@ import { connect } from "react-redux";
 import { useTranslation } from "react-i18next";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faImages } from "@fortawesome/free-solid-svg-icons";
+import Switch from "react-switch";
 
 import { updateTweetAction } from "../../redux/actions/tweet";
 
@@ -11,6 +12,7 @@ import imgSelect from "../../images/select.png";
 
 const Sidebar = ({ tweet, updateTweet }) => {
   const { t } = useTranslation("sidebar");
+
   const selectedImagePreview = (input, type) => {
     if (input.files && input.files[0]) {
       var reader = new FileReader();
@@ -116,22 +118,19 @@ const Sidebar = ({ tweet, updateTweet }) => {
             </div>
             <hr></hr>
             <div className="form-group">
-              <label htmlFor="accountStatus">{t("account-status")}</label>
-              <select
-                className="form-control"
-                id="accountStatus"
-                name="accountStatus"
-                aria-describedby="accountStatusHelp"
-                value={tweet.isVerifiedAccount ? "1" : "0"}
-                onChange={(e) =>
-                  updateTweet({
-                    isVerifiedAccount: e.target.value === "1" ? true : false,
-                  })
-                }
+              <label
+                className="d-flex align-items-center"
+                htmlFor="accountStatus"
               >
-                <option value="0">{t("account-status-no")}</option>
-                <option value="1">{t("account-status-yes")}</option>
-              </select>
+                <span className="mr-2">{t("account-status")}</span>
+                <Switch
+                  id="accountStatus"
+                  onChange={() =>
+                    updateTweet({ isVerifiedAccount: !tweet.isVerifiedAccount })
+                  }
+                  checked={tweet.isVerifiedAccount}
+                />
+              </label>
               <small id="accountStatusHelp" className="form-text text-muted">
                 {t("account-status-tip")}
               </small>
@@ -190,24 +189,23 @@ const Sidebar = ({ tweet, updateTweet }) => {
               </small>
             </div>
             <div className="form-group">
-              <label htmlFor="tweetContentImage">{t("content-image")}</label>
-              <select
-                className="form-control"
-                id="tweetContentImage"
-                name="tweetContentImage"
-                aria-describedby="tweetContentImageHelp"
-                value={tweet.content.image ? "1" : "0"}
-                onChange={(e) =>
-                  updateTweet({
-                    content: {
-                      image: e.target.value === "1" ? imgSelect : null,
-                    },
-                  })
-                }
+              <label
+                className="d-flex align-items-center"
+                htmlFor="tweetContentImage"
               >
-                <option value="0">{t("content-image-no")}</option>
-                <option value="1">{t("content-image-yes")}</option>
-              </select>
+                <span className="mr-2">{t("content-image")}</span>
+                <Switch
+                  id="tweetContentImage"
+                  onChange={(checked) =>
+                    updateTweet({
+                      content: {
+                        image: checked ? imgSelect : null,
+                      },
+                    })
+                  }
+                  checked={tweet.content.image}
+                />
+              </label>
               <small
                 id="tweetContentImageHelp"
                 className="form-text text-muted"
