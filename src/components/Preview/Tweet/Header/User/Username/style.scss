@@ -1,0 +1,9 @@
+.tweetUsername {
+    display: block;
+    font-size: 15px;
+    color: #8f9daa;
+
+    .tweet.dark & {
+        color: #6e767d;
+    }
+}

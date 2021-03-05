@@ -1,0 +1,10 @@
+.tweetFullName {
+    display: inline-block;
+    font-size: 15px;
+    font-weight: bold;
+    color: #212529;
+
+    .tweet.dark & {
+        color: #fff;
+    }
+}

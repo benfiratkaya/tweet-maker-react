@@ -5,13 +5,15 @@ const persistedState = loadState();
 
 const initialState = {
   theme: persistedState?.tweet?.theme || "light",
-  profilePhoto: {
-    frame: persistedState?.tweet?.profilePhoto?.frame || "circle",
-    photo: persistedState?.tweet?.profilePhoto?.photo || null,
+  user: {
+    profilePhoto: {
+      frame: persistedState?.tweet?.user?.profilePhoto?.frame || "circle",
+      photo: persistedState?.tweet?.user?.profilePhoto?.photo || null,
+    },
+    name: persistedState?.tweet?.user?.name || null,
+    username: persistedState?.tweet?.user?.username || null,
+    isVerifiedAccount: persistedState?.tweet?.user?.isVerifiedAccount || false,
   },
-  isVerifiedAccount: persistedState?.tweet?.isVerifiedAccount || false,
-  name: persistedState?.tweet?.name || null,
-  username: persistedState?.tweet?.username || null,
   content: {
     text: persistedState?.tweet?.content?.text || null,
     image: null,

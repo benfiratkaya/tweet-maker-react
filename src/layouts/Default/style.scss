@@ -6,3 +6,29 @@ body {
 .app {
     margin: 2rem 0;
 }
+
+html[data-theme=dark] {
+    body {
+        background-color: #06090F;
+    }
+    .card {
+        color: #fff;
+        background-color: #161B22;
+    }
+    .card-header, .themeSwitcher, .form-control, .input-group-text {
+        color: #fff;
+        background-color: #1c2836 !important;
+    }
+
+    .form-control, .input-group-text {
+        border: 0;
+    }
+
+    .header, .footer {
+        color: #fff;    
+        background-color: #161B22;
+        a {
+            color: #fff !important;
+        }
+    }
+}

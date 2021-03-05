@@ -1,41 +1,8 @@
 .tweet {
     background-color: white;
     padding: 25px;
-}
 
-.tweetProfilePicture {
-    width: 50px;
-    height: 50px;
-    margin-right: 10px;
-}
-.tweetFullName {
-    display: inline-block;
-    font-size: 15px;
-    font-weight: bold;
-}
-.tweetVerifiedAccount img {
-    display: inline-block;
-    width: 18px;
-    height: 18px;
-    margin-left: 3px;
-}
-.tweetUsername {
-    display: block;
-    font-size: 15px;
-}
-.tweetMore {
-    width: 18px;
-    height: 18px;
-}
-.tweetContent {
-    font-size: 23px;
-    line-height: 32px;
-    letter-spacing: 0.01em;
-    margin-top: 1.25rem;
-
-    img  {
-        width: 100%;
-        margin-top: 1.25rem;
-        border-radius: 0.50rem;
+    &.dark {
+        background-color: #000;
     }
 }

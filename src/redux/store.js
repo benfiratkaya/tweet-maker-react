@@ -5,6 +5,7 @@ import { saveState } from "./localStorage";
 import tweetReducer from "./reducers/tweet";
 import themeReducer from "./reducers/theme";
 import throttle from "lodash.throttle";
+import setThemeAttribute from "../utilities/setThemeAttribute";
 
 const bindMiddleware = (middleware) => {
   if (process.env.NODE_ENV !== "production") {
@@ -25,13 +26,14 @@ const store = createStore(
   bindMiddleware([thunkMiddleware, promiseMiddleware])
 );
 
-store.subscribe(
+store.subscribe(() => {
   throttle(() => {
     saveState({
       tweet: store.getState().tweet,
       theme: store.getState().theme,
     });
-  }, 1000)
-);
+  }, 1000);
+  setThemeAttribute(store.getState().theme);
+});
 
 export default store;

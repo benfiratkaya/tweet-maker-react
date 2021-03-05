@@ -1,0 +1,17 @@
+.tweetContent {
+    font-size: 23px;
+    line-height: 32px;
+    letter-spacing: 0.01em;
+    margin-top: 1.25rem;
+    color: #212529;
+
+    img  {
+        width: 100%;
+        margin-top: 1.25rem;
+        border-radius: 0.50rem;
+    }
+
+    .tweet.dark & {
+        color: #d9d9d9;
+    }
+}
