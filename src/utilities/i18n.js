@@ -11,6 +11,8 @@ i18n
     fallbackLng: "en",
     supportedLngs: ["en", "tr"],
 
+    defaultNS: "common",
+
     keySeparator: false, // we do not use keys in form messages.welcome
 
     interpolation: {
