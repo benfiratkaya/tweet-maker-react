@@ -16,7 +16,7 @@
     "username-placeholder": "Write a username.",
     "content": "Content:",
     "content-placeholder": "Write a tweet content.",
-    "content-tip": "For adding variables: %link% or @username",
+    "content-tip": "For adding variables: #tag or @username",
     "content-image": "Tweet Image:",
     "content-image-tip": "Adds images to your tweet.",
     "select-img-button": "Select"

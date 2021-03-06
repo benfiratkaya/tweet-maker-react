@@ -32,8 +32,11 @@ store.subscribe(
       tweet: store.getState().tweet,
       theme: store.getState().theme,
     });
-    setThemeAttribute(store.getState().theme);
   }, 1000)
 );
+
+store.subscribe(() => {
+  setThemeAttribute(store.getState().theme);
+});
 
 export default store;

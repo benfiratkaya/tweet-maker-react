@@ -16,7 +16,7 @@
     "username-placeholder": "Kullanıcı adını giriniz.",
     "content": "İçerik:",
     "content-placeholder": "Tweet içeriğini giriniz.",
-    "content-tip": "Değişken ekleme için: %link% veya @username",
+    "content-tip": "Değişken ekleme için: #etiket veya @kullaniciadi",
     "content-image": "Tweet Görseli:",
     "content-image-tip": "Tweet'inize görsel ekler.",
     "select-img-button": "Resim Seç"
